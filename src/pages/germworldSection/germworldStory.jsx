@@ -1,6 +1,10 @@
 "use client"
 
 import TextPressure from "@/components/effects/textPressure";
+import BlurText from "@/components/effects/blurText";
+import { useRef } from 'react';
+import VariableProximity from "@/components/effects/variableProximity";
+
 
 const germs = [
     {
@@ -49,6 +53,12 @@ const medicine = [
 ]
 
 export default function GermWorldStory () {
+
+    const handleAnimationComplete = () => {
+        console.log('Animation completed!');
+    };
+
+
     return (
         <div className="flex flex-col items-center justify-center text-center overflow-x-hidden">
             <div style={{position: 'relative', height: '200px'}}>
@@ -65,6 +75,14 @@ export default function GermWorldStory () {
                     minFontSize={100}
                 />
             </div>
+            <BlurText
+                text="Welcome To The Germ World!"
+                delay={150}
+                animateBy="words"
+                direction="top"
+                onAnimationComplete={handleAnimationComplete}
+                className="text-2xl mb-8 text-white"
+                />
 
             <div className="flex flex-col items-center justify-center w-full px-12">
 
@@ -94,7 +112,6 @@ export default function GermWorldStory () {
                 <div className="w-[70%] flex flex-col items-center justify-center mt-12">
                     <div className="w-full h-auto bg-white rounded-2xl p-4">
                         <h2>The Medicines</h2>
-                        <img src={"#"}/>
                     </div>
                     {medicine.map((med, index) => (
                         <div
