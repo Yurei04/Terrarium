@@ -142,7 +142,7 @@ const ModeWrapper = memo(function ModeWrapper({
 function Lens({ modeProps, ...p }) {
   return (
     <ModeWrapper
-      glb="/assets/3d/lens.glb"
+      glb="/assests/3d/lens.glb"
       geometryKey="Cylinder"
       followPointer
       modeProps={modeProps}
