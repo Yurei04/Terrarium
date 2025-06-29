@@ -16,6 +16,11 @@ const games = [
         title: "Wellness Map",
         link: "/theWellnessMap",
         img: "#"
+    },
+    {
+        title: "Build Your Balance",
+        link: "/buildYourBalance",
+        img: "#"
     }
 ]
 

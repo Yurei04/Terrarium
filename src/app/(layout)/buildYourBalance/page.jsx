@@ -1,8 +1,9 @@
+import BuildYourBalanceMain from "@/pages/buildYourBalanceSection/buildYourBalanceMain";
 
 export default function BuildYourBalance () {
     return (
         <div className="flex flex-col p-0 m-0 items-center justify-center overflow-x-hidden">
-
+            <BuildYourBalanceMain/>
         </div>
     )
 }
