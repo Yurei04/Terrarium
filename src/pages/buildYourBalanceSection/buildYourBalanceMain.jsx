@@ -4,6 +4,12 @@ import AnimatedContent from "@/components/effects/animatedContent";
 import BlurText from "@/components/effects/blurText";
 import TextPressure from "@/components/effects/textPressure";
 import { useEffect, useRef } from "react";
+import BMIconverter from "./BMIconverter";
+import BMRconverter from "./BMRCalculator";
+import BodyFatEstimator from "./BodyFatEstimator";
+import IdealWeightCalculator from "./IdealWeightCalculator";
+import StepToCalorieConverter from "./stepToCalorieConverter";
+import TDEECalculator from "./TDEECalculator";
 
 
 export default function BuildYourBalanceMain() {
@@ -29,6 +35,14 @@ export default function BuildYourBalanceMain() {
                     />
                 </div>
             </div>           
+            <div className="flex lg:flex-col sm:flex-col flex-1/3 items-center justify-center gap-6">
+            <BMIconverter />
+            <BMRconverter />
+            <BodyFatEstimator />
+            <IdealWeightCalculator />
+            <StepToCalorieConverter />
+            <TDEECalculator />
+            </div>
 
         </div>
     );

@@ -1,9 +1,14 @@
 "use client"
-
+import { use, useState } from "react"
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { use, useState } from "react"
-
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 
 export default function IdealWeightCalculator () {
@@ -30,7 +35,7 @@ export default function IdealWeightCalculator () {
 
     return (
         <div className="w-full h-min-screen ">
-            <Input type="number" placeholder="Height (cm)" value={height} onChang={(e) => setHeight(e.target.value)} />
+            <Input type="number" placeholder="Height (cm)" value={height} onChange={(e) => setHeight(e.target.value)} />
                         
             <Select className="" value={gender} onChange={(e) => setGender(e.target.value)} >
                 <SelectTrigger className="w-[180px]">

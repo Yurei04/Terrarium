@@ -2,6 +2,13 @@
 
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 import { Button } from "@/components/ui/button";
 
 export default function TDEECalculator() {
@@ -32,17 +39,27 @@ export default function TDEECalculator() {
       <Input type="number" placeholder="Weight (kg)" value={weight} onChange={(e) => setWeight(e.target.value)} />
       <Input type="number" placeholder="Height (cm)" value={height} onChange={(e) => setHeight(e.target.value)} />
       <Input type="number" placeholder="Age" value={age} onChange={(e) => setAge(e.target.value)} />
-      <select className="p-2 rounded" value={gender} onChange={(e) => setGender(e.target.value)}>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-      </select>
-      <select className="p-2 rounded" value={activity} onChange={(e) => setActivity(e.target.value)}>
-        <option value="1.2">Sedentary</option>
-        <option value="1.375">Lightly active</option>
-        <option value="1.55">Moderately active</option>
-        <option value="1.725">Very active</option>
-        <option value="1.9">Extra active</option>
-      </select>
+        <Select className="" value={gender} onChange={(e) => setGender(e.target.value)} >
+            <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="Theme" />
+            </SelectTrigger>
+            <SelectContent value={gender}>
+                <SelectItem value="male">Male</SelectItem>
+                <SelectItem value="female">Female</SelectItem>
+            </SelectContent>
+        </Select>
+        <Select className="" value={activity} onChange={(e) => setActivity(e.target.value)} >
+            <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="Theme" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="1.2">Sedentary</SelectItem>
+              <SelectItem value="1.375">Lightly active</SelectItem>
+              <SelectItem value="1.55">Moderately active</SelectItem>
+              <SelectItem value="1.725">Very active</SelectItem>
+              <SelectItem value="1.9">Extra active</SelectItem>
+            </SelectContent>
+        </Select>
       <Button onClick={calculate}>Calculate TDEE</Button>
       {tdee && <p>TDEE: {tdee} kcal/day</p>}
     </div>

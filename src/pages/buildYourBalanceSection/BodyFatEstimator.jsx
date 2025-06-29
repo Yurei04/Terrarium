@@ -2,6 +2,13 @@
 
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 import { Button } from "@/components/ui/button";
 
 export default function BodyFatEstimator() {
@@ -37,10 +44,16 @@ const [bodyFat, setBodyFat] = useState(null);
         {gender === "female" && (
             <Input type="number" placeholder="Hip (cm)" value={hip} onChange={(e) => setHip(e.target.value)} />
         )}
-        <select className="p-2 rounded" value={gender} onChange={(e) => setGender(e.target.value)}>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-        </select>
+
+        <Select className="" value={gender} onChange={(e) => setGender(e.target.value)} >
+            <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="Theme" />
+            </SelectTrigger>
+            <SelectContent value={gender}>
+                <SelectItem value="male">Male</SelectItem>
+                <SelectItem value="female">Female</SelectItem>
+            </SelectContent>
+        </Select>
         <Button onClick={calculate}>Estimate Body Fat %</Button>
         {bodyFat && <p>Body Fat %: {bodyFat}%</p>}
         </div>
