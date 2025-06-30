@@ -195,8 +195,8 @@ export default function MythOrMedicineMain () {
 
 
     return (
-        <div className="w-full min-h-screen overflow-x-hidden flex flex-col" id="mythFact">
-            <div className="flex flex-col w-full m-5 items-center justify-center  gap-5">
+        <div className="w-full min-h-screen overflow-x-hidden flex flex-col" id="mythFact z-10">
+            <div className="flex flex-col w-full m-5 items-center justify-center  gap-5 z-10">
                 <div style={{position: 'relative', height: '150px'}}>
                     <TextPressure
                         text="Myth_Or_Medicine"
@@ -211,30 +211,30 @@ export default function MythOrMedicineMain () {
                         minFontSize={100}
                     />
                 </div>
-                <div className="flex flex-row items-center justify-center gap-4">
+                <div className="flex flex-row items-center justify-center gap-4 z-10">
                     <div className="text-sm text-white">Time Left: {timeLeft}</div>
                     <div className="text-white">Lives: {life}</div>
         
                 </div>
-                <div className="w-[500px] h-[300px] flex flex-row bg-white border border-white rounded-2xl justify-center items-center" id="imgBox">
+                <div className="w-[500px] h-[300px] z-10 flex flex-row bg-white border border-white rounded-2xl justify-center items-center" id="imgBox">
                     {current.image && <img src={current.image} alt="question" className="w-64 h-40 object-cover mx-auto mb-4" />}
                 </div>
-                <div className=""> 
+                <div className="z-10"> 
                     <p className="text-sm text-white">Question: {current.question}</p>
                 </div>
                 {showFeedback && (
-                <div className="text-md mt-2">
+                <div className="text-md mt-2 z-10">
                     {selectedAnswer === current.answer ? (
                         <p className="text-md mt-2 text-green-400">Correct!</p>
                     ) : (
                         <p className="text-md mt-2 text-red-400">Wrong!</p>
                     )
                 }
-                <p className="mt-1 text-white">{current.ansDes}</p>
+                <p className="mt-1 text-white z-10">{current.ansDes}</p>
 
                 </div>
                 )}
-                <div className="flex flex-row items-center justify-center gap-3">
+                <div className="flex flex-row items-center justify-center gap-3 z-10">
                     {!gameStart && (
                     <Button
                         variant="outline"
