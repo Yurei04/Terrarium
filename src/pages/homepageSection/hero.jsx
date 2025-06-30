@@ -8,57 +8,57 @@ const games = [
     {
         title: "Germ World",
         link: "/germWorld",
-        img: "#"
+        img: "/images/bkg1.jpg"
     },
     {
         title: "Myth Or Medicine",
         link: "/mythOrMedicine",
-        img: "#"
+        img: "/images/bkg1.jpg"
     },
     {
         title: "Wellness Map",
         link: "/theWellnessMap",
-        img: "#"
+        img: "/images/bkg1.jpg"
     },
     {
         title: "Build Your Balance",
         link: "/buildYourBalance",
-        img: "#"
+        img: "/images/bkg1.jpg"
     },
     {
         title: "Your Body In Numbers",
         link: "/yourBodyInNumbers",
-        img: "#"
+        img: "/images/bkg1.jpg"
     },
     {
         title: "Health Time Machine",
         link: "/healthTimeMachine",
-        img: "#"
+        img: "/images/bkg1.jpg"
     },
     {
         title: "Chat Care",
         link: "/buildYourBalance",
-        img: "#"
+        img: "/images/bkg1.jpg"
     },
     {
         title: "Life Line",
         link: "/lifeLines",
-        img: "#"
+        img: "/images/bkg1.jpg"
     },
     {
         title: "Anti Germs",
         link: "/antiGerms",
-        img: "#"
+        img: "/images/bkg1.jpg"
     },
     {
         title: "Health Check List",
         link: "/antiGerms",
-        img: "#"
+        img: "/images/bkg1.jpg"
     },
     {
         title: "Comming Soon",
         link: "/buildYourBalance",
-        img: "#"
+        img: "/images/bkg1.jpg"
     },
     
 ]

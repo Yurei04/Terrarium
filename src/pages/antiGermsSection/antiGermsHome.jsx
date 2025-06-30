@@ -2,6 +2,7 @@
 
 import AnimatedContent from "@/components/effects/animatedContent";
 import BlurText from "@/components/effects/blurText";
+import Particles from "@/components/effects/particles";
 import TextPressure from "@/components/effects/textPressure";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -12,6 +13,18 @@ export default function AntiGermsHome() {
         <div className="relative w-full min-h-screen overflow-hidden bg-black">
 
             <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white text-center px-4">
+                <div className="pointer-events-none fixed inset-0 z-0 ">
+                    <Particles
+                        particleColors={['#ffffff', '#ffffff']}
+                        particleCount={200}
+                        particleSpread={10}
+                        speed={0.1}
+                        particleBaseSize={100}
+                        moveParticlesOnHover={true}
+                        alphaParticles={false}
+                        disableRotation={false}
+                    />
+                </div>
                 <div className="mb-10">
                     <TextPressure
                         text="Anti_Germs"

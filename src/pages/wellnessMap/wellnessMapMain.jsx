@@ -67,14 +67,14 @@ const wellnessMap = [
     {
         country: "Morocco",
         location: "Fes, Morocco",
-        image: "/images/morocco.png",
+        image: "/images/moroco.png",
         story: `In Morocco, mint tea with lemon and honey is brewed and slowly enjoyed. The warmth opens up breathing, while rest in quiet, shaded rooms allows the body to recover in peace.`
     },
-    {
-      country: "Vietnam",
-      location: "Hanoi, Vietnam",
-      image: "/images/vietnam.jpg",
-      story: `In Vietnam, steamy bowls of pho are served to nourish the body during illness. Ginger and lemongrass tea is sipped slowly, and eucalyptus oil is rubbed on the chest to ease breathing. Rest is taken near open windows to let in fresh air.`
+      {
+        country: "Vietnam",
+        location: "Hanoi, Vietnam",
+        image: "/images/vietnam.jpg",
+        story: `In Vietnam, steamy bowls of pho are served to nourish the body during illness. Ginger and lemongrass tea is sipped slowly, and eucalyptus oil is rubbed on the chest to ease breathing. Rest is taken near open windows to let in fresh air.`
     },
     {
         country: "Turkey",
@@ -129,6 +129,12 @@ const wellnessMap = [
         location: "Shiraz, Iran",
         image: "/images/iran.png",
         story: `In Iran, herbal teas like borage and thyme are given to calm the body. Rice soup with saffron and cinnamon is served gently warm, and the sick are kept indoors with wool blankets and soft lighting for peace and recovery.`
+    },
+    {
+        country: "More",
+        location: "Coming Soon",
+        image: "/images/bkg.jpg",
+        story: `More Countries Comming Soon`
     }
 
 ];

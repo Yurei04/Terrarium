@@ -102,7 +102,7 @@ const maxYear = 2100
 const step = 10
 
 export default function HealthTimeMachineMain() {
-  const [year, setYear] = useState(2000)
+  const [year, setYear] = useState(1920)
 
   const handleChange = (value) => {
     const rounded = Math.round(value[0] / step) * step
@@ -112,13 +112,13 @@ export default function HealthTimeMachineMain() {
   const currentData = dataByYear[year]
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center p-6 text-white bg-gradient-to-b from-black to-zinc-900">
-      <h2 className="text-4xl font-bold mb-4 text-center">🧬 Generational Health Time Machine</h2>
-      <p className="mb-8 text-center max-w-xl text-lg">
+    <section className="z-10 min-h-screen flex flex-col items-center justify-center text-amber-100  p-4 rounded-xl">
+      <h2 className="z-10 text-4xl font-bold mb-4 text-center">🧬 Generational Health Time Machine</h2>
+      <p className="z-10 mb-8 text-center max-w-xl text-lg">
         Use the slider to travel through time and see how health evolved.
       </p>
 
-      <div className="w-full max-w-md mb-6">
+      <div className="w-full max-w-md mb-6 z-10">
         <Slider
           min={minYear}
           max={maxYear}
@@ -126,7 +126,7 @@ export default function HealthTimeMachineMain() {
           value={[year]}
           onValueChange={handleChange}
         />
-        <div className="text-center mt-2 text-lg font-medium">Year: {year}</div>
+        <div className="text-center mt-2 text-lg font-medium z-10">Year: {year}</div>
       </div>
 
       <AnimatePresence mode="wait">
@@ -136,7 +136,7 @@ export default function HealthTimeMachineMain() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -30 }}
           transition={{ duration: 0.4 }}
-          className="w-full max-w-xl p-6 rounded-xl bg-white/10 backdrop-blur-lg border border-white/20"
+          className="w-full max-w-xl p-6 rounded-xl bg-white/10 backdrop-blur-lg border border-white/20 z-10 "
         >
           {currentData ? (
             <>

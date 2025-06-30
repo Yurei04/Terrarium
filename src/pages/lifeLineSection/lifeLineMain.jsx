@@ -15,7 +15,6 @@ const lifeTips = [
 { age: 9, tip: "Water over soda. Sleep over screens." },
 { age: 10, tip: "Vitamins and playtime are critical." },
 { age: 11, tip: "Talk about feelings. Puberty begins." },
-// ... you can expand this to 100 entries
 { age: 20, tip: "Exercise regularly and build strong habits." },
 { age: 30, tip: "Balance work with sleep and social life." },
 { age: 40, tip: "Monitor your heart health and stress levels." },
@@ -44,7 +43,7 @@ export default function LifeLineMain() {
     return (
         <section
         ref={ref}
-        className="min-h-screen flex items-center justify-center px-6 py-24 border-b border-white/10"
+        className="min-h-screen flex items-center justify-center px-6 py-24 border-b border-white/10 z-10"
         >
         <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -52,7 +51,7 @@ export default function LifeLineMain() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-2xl"
         >
-            <div className="text-6xl font-bold text-blue-300 mb-4">
+            <div className="text-6xl font-bold text-amber-300 mb-4">
             Age {age}
             </div>
             <p className="text-2xl text-white/90">{tip}</p>
