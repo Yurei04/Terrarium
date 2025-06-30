@@ -2,6 +2,8 @@ import BlurText from "@/components/effects/blurText";
 import Particles from "@/components/effects/particles";
 import TextPressure from "@/components/effects/textPressure";
 import GermWorldAbout from "./germWorldAbout";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 
 
@@ -49,6 +51,11 @@ export default function GermWorldHome() {
                     onAnimationComplete={handleAnimationComplete}
                     className="text-2xl mb-8 text-white"
                 />
+                <Link href="#germWorld">
+                    <Button className="bg-green-100 text-black hover:bg-green-700 hover:text-green-100 font-bold cursor-pointer">
+                        Lets Go!
+                    </Button>
+                </Link>
             </div>
             <GermWorldAbout />
         </div>

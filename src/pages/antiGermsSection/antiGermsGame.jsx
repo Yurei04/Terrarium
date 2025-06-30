@@ -80,23 +80,23 @@ export default function AntiGermsGame() {
     }
 
     return (
-        <div className="relative w-full min-h-screen overflow-hidden bg-black text-white">
+        <div className="relative w-full min-h-screen overflow-hidden bg-blue-600/25 text-blue-100 " id='antigerm'>
             <Component />
 
             {isPlaying && (
-                <div className="absolute top-4 right-4 bg-black/70 text-white text-xl font-bold px-4 py-2 rounded-lg z-10">
+                <div className="absolute top-4 right-4 bg-black/70 text-blue-100 text-xl font-bold px-4 py-2 rounded-lg z-10">
                     {timeLeft}s
                 </div>
             )}
 
-            <div className="absolute top-4 left-4 bg-black/70 text-white text-xl font-bold px-4 py-2 rounded-lg z-10">
+            <div className="absolute top-4 left-4 bg-black/70 text-blue-100 text-xl font-bold px-4 py-2 rounded-lg z-10">
                 Score: {score}
             </div>
 
             {showGameEnd && (
-                <div className="absolute inset-0 flex items-center justify-center z-20 bg-black/80 text-white text-4xl font-bold">
+                <div className="absolute inset-0 flex items-center justify-center z-20 bg-black/80 text-blue-100 text-4xl font-bold flex-col gap-4">
                     ⏰ Game End
-                    <Button onClick={returnGame} className="ml-4 text-base font-normal cursor-pointer">
+                    <Button onClick={returnGame} className="ml-4 text-base font-normal bg-blue-100 text-black hover:bg-blue-700 hover:text-blue-100 cursor-pointer">
                         Return
                     </Button>
                 </div>

@@ -70,25 +70,25 @@ export default function WellnessMapHome() {
                     />
                 </div>
                 <AnimatedContent
-                distance={150}
-                direction="horizontal"
-                reverse={false}
-                duration={1.2}
-                ease="bounce.out"
-                initialOpacity={0.2}
-                animateOpacity
-                scale={1.1}
-                threshold={0.2}
-                delay={0.3}
+                    distance={150}
+                    direction="horizontal"
+                    reverse={false}
+                    duration={1.2}
+                    ease="bounce.out"
+                    initialOpacity={0.2}
+                    animateOpacity
+                    scale={1.1}
+                    threshold={0.2}
+                    delay={0.3}
                 >
-                    <p className="text-min-md">
-                        Quis deserunt cupidatat laborum fugiat non voluptate. Adipisicing cupidatat ullamco dolor commodo non ipsum ea incididunt irure exercitation. Sint tempor eiusmod quis laboris nostrud incididunt adipisicing cupidatat reprehenderit do dolor et.
-                        Quis deserunt cupidatat laborum fugiat non voluptate. Adipisicing cupidatat ullamco dolor commodo non ipsum ea incididunt irure exercitation. Sint tempor eiusmod quis laboris nostrud incididunt adipisicing cupidatat reprehenderit do dolor et.
+                    <p className="text-min-md mb-6">
+                        Around the world, people turn to unique comfort rituals when illness strikes—steaming herbal teas, warm soups, soothing compresses, and natural remedies passed down through generations. These practices reflect the deep connection between culture, healing, and home.
                     </p>
                     <p className="text-min-md">
-                        Quis deserunt cupidatat laborum fugiat non voluptate. Adipisicing cupidatat ullamco dolor commodo non ipsum ea incididunt irure exercitation. Sint tempor eiusmod quis laboris nostrud incididunt adipisicing cupidatat reprehenderit do dolor et.
+                        This journey through global wellness traditions celebrates the many ways communities care for the sick with love and intention. While science guides modern medicine, cultural healing teaches us that recovery is also about warmth, rest, and the simple things that make us feel safe.
                     </p>
                 </AnimatedContent>
+
             </div>
         </div>
     );

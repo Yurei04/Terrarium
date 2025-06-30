@@ -1,12 +1,17 @@
-import BuildYourBalanceMain from "@/pages/buildYourBalanceSection/buildYourBalanceMain";
-import GermWorldStory from "@/pages/germworldSection/germworldStory";
+
+import { Separator } from "@/components/ui/separator";
+import Footer from "@/pages/homepageSection/footer";
 import Hero from "@/pages/homepageSection/hero";
-import MythOrMedicine from "@/pages/mythOrMedicineSection/mythOrmedicineMain";
+import NavBar from "@/pages/homepageSection/navbar";
+
 
 export default function Home() {
   return (
     <div>
+      <NavBar />
+
       <Hero />
+      <Footer />
     </div>
   );
 }

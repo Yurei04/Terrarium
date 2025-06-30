@@ -54,6 +54,38 @@ const germs = [
         Realimage: "/images/Virus-pana.png",
         des: "Rotavirus is a major cause of diarrhea among infants and young children. Vaccines are available and have significantly reduced its global impact.",
         transmission: "Fecal-oral route, often through contaminated hands or surfaces."
+    },
+    {
+        title: "Mycobacterium tuberculosis",
+        type: "Bacteria",
+        image: "/images/Virus-amico.png",
+        Realimage: "/images/Virus-pana.png",
+        des: "This bacterium causes tuberculosis, a potentially serious infectious disease that mainly affects the lungs and can be fatal if untreated.",
+        transmission: "Airborne droplets from coughing, sneezing, or speaking."
+    },
+    {
+        title: "Hepatitis B Virus",
+        type: "Virus",
+        image: "/images/Virus-amico.png",
+        Realimage: "/images/Virus-pana.png",
+        des: "This virus causes liver infection and can lead to chronic liver disease or liver cancer. Vaccines are effective in preventing it.",
+        transmission: "Contact with infected blood, semen, or other body fluids."
+    },
+    {
+        title: "Clostridium difficile (C. diff)",
+        type: "Bacteria",
+        image: "/images/Virus-amico.png",
+        Realimage: "/images/Virus-pana.png",
+        des: "A harmful bacterium that can overgrow in the gut after antibiotic use, causing severe diarrhea and colitis.",
+        transmission: "Fecal-oral route, often in healthcare settings via contaminated hands or surfaces."
+    },
+    {
+        title: "Human Immunodeficiency Virus (HIV)",
+        type: "Virus",
+        image: "/images/Virus-amico.png",
+        Realimage: "/images/Virus-pana.png",
+        des: "HIV attacks the immune system, weakening the body's ability to fight infections. Without treatment, it can lead to AIDS.",
+        transmission: "Unprotected sex, sharing needles, blood transfusion, or from mother to child during birth or breastfeeding."
     }
 ];
 
@@ -88,6 +120,30 @@ const medicine = [
         image: "/images/Virus-pana.png",
         des: "A strong antibiotic used to treat serious infections caused by resistant bacteria like MRSA.",
         usedFor: "Staphylococcus aureus (MRSA)"
+    },
+    {
+        title: "Isoniazid",
+        image: "/images/Virus-pana.png",
+        des: "A first-line antibiotic used in the treatment and prevention of tuberculosis. It's most effective when used alongside other TB drugs.",
+        usedFor: "Mycobacterium tuberculosis (TB)"
+    },
+    {
+        title: "Tenofovir",
+        image: "/images/Virus-pana.png",
+        des: "An antiviral medication used in treating chronic Hepatitis B and HIV infections. It helps suppress viral replication.",
+        usedFor: "Hepatitis B Virus, HIV"
+    },
+    {
+        title: "Metronidazole",
+        image: "/images/Virus-pana.png",
+        des: "An antibiotic and antiprotozoal used to treat infections caused by anaerobic bacteria and parasites, including C. difficile.",
+        usedFor: "Clostridium difficile (C. diff)"
+    },
+    {
+        title: "Antiretroviral Therapy (ART)",
+        image: "/images/Virus-pana.png",
+        des: "A combination of drugs used to manage HIV by lowering the viral load and boosting immune system function.",
+        usedFor: "HIV/AIDS"
     }
 ];
 
@@ -98,7 +154,7 @@ export default function GermWorldStory () {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center text-center overflow-x-hidden">
+        <div className="flex flex-col items-center justify-center text-center overflow-x-hidden" id="germWorld">
             <div className="flex flex-col items-center justify-center w-full px-12">
                 <BlurText
                     text="Bacteria & Viruses"
@@ -111,7 +167,7 @@ export default function GermWorldStory () {
                 {germs.map((germ, index) => (
                     <div
                     key={index}
-                    className={`w-full h-auto flex p-4 items-center  ${
+                    className={`w-full h-screen gap-6 flex p-4 items-center  ${
                         index % 2 === 0 ? "flex-row" : "flex-row-reverse"
                     }`}
                     >
@@ -163,7 +219,7 @@ export default function GermWorldStory () {
                     {medicine.map((med, index) => (
                         <div
                         key={index}
-                        className={`w-full h-auto flex p-4 items-center ${
+                        className={`w-full h-screen flex p-4 items-center ${
                             index % 2 === 0 ? "flex-row" : "flex-row-reverse"
                         }`}
                         >

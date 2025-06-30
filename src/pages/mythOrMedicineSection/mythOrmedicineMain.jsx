@@ -9,72 +9,108 @@ const questions = [
         id: 1,
         question: "Can pee help jellyfish sting?",
         answer: "no",
-        image: "",
+        image: "/images/coughing-71.png",
         ansDes: "No, pee cannot help a jellyfish sting—it may actually trigger more venom release. Use vinegar instead."
     },
     {
         id: 2,
         question: "Can antibiotics cure viral infections like the common cold?",
         answer: "no",
-        image: "",
+        image: "/images/coughing-71.png",
         ansDes: "No, antibiotics only work against bacteria. Viruses require antivirals or symptom-based treatment."
     },
     {
         id: 3,
         question: "Should you finish your full course of antibiotics even if you feel better?",
         answer: "yes",
-        image: "",
+        image: "/images/coughing-71.png",
         ansDes: "Yes, stopping antibiotics early can lead to resistant bacteria and incomplete healing."
     },
     {
         id: 4,
         question: "Does handwashing with soap kill germs more effectively than water alone?",
         answer: "yes",
-        image: "",
+        image: "/images/coughing-71.png",
         ansDes: "Yes, soap breaks down germ membranes and removes them better than water alone."
     },
     {
         id: 5,
         question: "Can vaccines cause autism?",
         answer: "no",
-        image: "",
+        image: "/images/coughing-71.png",
         ansDes: "No, this myth has been thoroughly debunked by scientific studies. Vaccines are safe and necessary."
     },
     {
         id: 6,
         question: "Can garlic cure bacterial infections?",
         answer: "no",
-        image: "",
+        image: "/images/coughing-71.png",
         ansDes: "No, while garlic has mild antimicrobial properties, it is not a substitute for real antibiotics."
     },
     {
         id: 7,
         question: "Do antibiotics kill both good and bad bacteria in your body?",
         answer: "yes",
-        image: "",
+        image: "/images/coughing-71.png",
         ansDes: "Yes, antibiotics often disrupt your microbiome by killing both harmful and helpful bacteria."
     },
     {
         id: 8,
         question: "Can you build immunity by getting sick often?",
         answer: "no",
-        image: "",
+        image: "/images/coughing-71.png",
         ansDes: "No, frequent sickness doesn’t build strong immunity and can damage your body. Vaccination is safer."
     },
     {
         id: 9,
         question: "Can you catch the flu from the flu vaccine?",
         answer: "no",
-        image: "",
+        image: "/images/coughing-71.png",
         ansDes: "No, flu vaccines use inactivated virus or parts of it, so they cannot cause the flu."
     },
     {
         id: 10,
         question: "Is it okay to use leftover antibiotics from a previous illness?",
         answer: "no",
-        image: "",
+        image: "/images/coughing-71.png",
         ansDes: "No, using leftover antibiotics is unsafe and may be ineffective or cause resistance."
+    },
+    {
+        id: 11,
+        question: "In some parts of India, is cow urine used as a cure for diseases?",
+        answer: "yes",
+        image: "/images/coughing-71.png",
+        ansDes: "Yes, some traditional beliefs in India promote cow urine as a remedy, but there is no scientific evidence that it cures diseases. Medical treatment is still necessary."
+    },
+    {
+        id: 12,
+        question: "In Japan, is wearing a mask mostly about protecting others rather than yourself?",
+        answer: "yes",
+        image: "/images/coughing-71.png",
+        ansDes: "Yes, in Japan, people wear masks primarily to prevent spreading their own germs to others, especially when sick."
+    },
+    {
+        id: 13,
+        question: "Do people in Nigeria sometimes use herbal remedies instead of vaccines?",
+        answer: "yes",
+        image: "/images/coughing-71.png",
+        ansDes: "Yes, some in Nigeria turn to traditional herbal medicine, but it cannot replace the safety and effectiveness of vaccines."
+    },
+    {
+        id: 14,
+        question: "In the Philippines, is 'tuob' or steam inhalation promoted as a COVID-19 cure?",
+        answer: "yes",
+        image: "/images/coughing-71.png",
+        ansDes: "Yes, 'tuob' became popular during the pandemic, but there’s no scientific proof that steam inhalation cures COVID-19. It may relieve symptoms but isn’t a cure."
+    },
+    {
+        id: 15,
+        question: "Is eating raw garlic in China believed to prevent colds?",
+        answer: "yes",
+        image: "/images/coughing-71.png",
+        ansDes: "Yes, many in China use raw garlic as a traditional remedy. While it has mild antimicrobial effects, it's not a substitute for proper hygiene or medical treatment."
     }
+
 ];
 
 
@@ -159,7 +195,7 @@ export default function MythOrMedicineMain () {
 
 
     return (
-        <div className="w-full min-h-screen p-0 m-0 overflow-x-hidden flex flex-col" id="game">
+        <div className="w-full min-h-screen overflow-x-hidden flex flex-col" id="mythFact">
             <div className="flex flex-col w-full m-5 items-center justify-center  gap-5">
                 <div style={{position: 'relative', height: '150px'}}>
                     <TextPressure
@@ -180,7 +216,7 @@ export default function MythOrMedicineMain () {
                     <div className="text-white">Lives: {life}</div>
         
                 </div>
-                <div className="w-[500px] h-[300px] flex flex-row bg-white rounded-2xl" id="imgBox">
+                <div className="w-[500px] h-[300px] flex flex-row bg-white border border-white rounded-2xl justify-center items-center" id="imgBox">
                     {current.image && <img src={current.image} alt="question" className="w-64 h-40 object-cover mx-auto mb-4" />}
                 </div>
                 <div className=""> 

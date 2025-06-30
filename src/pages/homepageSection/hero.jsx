@@ -65,7 +65,7 @@ const games = [
 
 export default function Hero () {
     return (
-        <div className="w-full h-min-screen flex flex-col items-center justify-center">
+        <div className="w-full h-min-screen flex flex-col items-center justify-center mt-6 p-6">
             <div className="grid lg:grid-cols-3 sm:grid-cols-1 items-center justify-center p-4 m-12  gap-12">
                 {games.map((game, index) => (
 
@@ -82,8 +82,6 @@ export default function Hero () {
 
                                 <h2 className="text-white">{game.title}</h2>
                                 <img src={game.img} className="border"></img>
-
-
                             </GlareHover>
                         
                          </div>   
