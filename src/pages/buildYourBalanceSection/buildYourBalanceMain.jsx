@@ -66,7 +66,8 @@ export default function BuildYourBalanceMain() {
                         hoverFillColor='#222'
                     />
                 </div>
-                <div className="mb-10 z-10">
+                <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white text-center px-4 ">
+                <div className="mb-10 bg-amber-300/70 p-2 rounded-2xl">
                     <TextPressure
                         text="Build_Your_Balance"
                         flex={true}
@@ -80,27 +81,66 @@ export default function BuildYourBalanceMain() {
                         minFontSize={150}
                     />
                 </div>
-            </div>           
-            <div className="flex flex-col items-center justify-self-auto text-center p-4 gap-100 z-10">
-                {calculators.map((calc, index) => (
-                    <div
-                    key={calc.key}
-                    className={`flex flex-col sm:flex-col lg:flex-row ${
-                        index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                    } justify-between items-center w-full gap-4 z-10`}
-                    >
-                    <SpotlightCard
-                        className="custom-spotlight-card flex flex-col m-4 z-10"
-                        spotlightColor="rgba(0, 229, 255, 0.2)"
-                    >
-                        <p className="text-amber-100 z-10">
-                            {calc.about}
-                        </p>
-                    </SpotlightCard>
-                    {calc.component}
-                    </div>
-                ))}
+                <BlurText
+                    text="Welcome To The Wellness Map"
+                    delay={150}
+                    animateBy="words"
+                    direction="top"
+                    className="text-2xl mb-8 text-black bg-amber-300/70 p-2 rounded-2xl"
+                />
             </div>
+
+            <div className="flex lg:flex-row sm:flex-col text-black items-center justify-center w-full h-1/2 mb-12 p-12 mt-6 z-10 bg-amber-300/70 rounded-2xl">
+                <AnimatedContent
+                    distance={150}
+                    direction="horizontal"
+                    reverse={false}
+                    duration={1.2}
+                    ease="bounce.out"
+                    initialOpacity={0.2}
+                    animateOpacity
+                    scale={1.1}
+                    threshold={0.2}
+                    delay={0.3}
+                >
+                    <div>
+                    <p className="text-min-md mb-6">
+                        Life is a balancing act—between work and rest, movement and stillness, indulgence and discipline. But no one teaches us how to measure that balance.
+                    </p>
+                    <p className="text-min-md mb-6">
+                        This interactive experience invites you to reflect on your daily habits. Drop activities, foods, and routines onto the scale and watch your well-being shift. Can you create harmony in your choices?
+                    </p>
+                    <p className="text-min-md">
+                        “Build Your Balance” is not about perfection. It’s about awareness—and discovering how small choices tilt the scale toward health, joy, and resilience.
+                    </p>
+                    </div>
+                </AnimatedContent>
+            </div>
+
+            </div>
+            <div className="flex flex-col items-center justify-center mt-12 mb-12">
+                <div className="w-2/3 flex flex-col items-center justify-center text-center p-4 gap-100 z-10">
+                    {calculators.map((calc, index) => (
+                        <div
+                        key={calc.key}
+                        className={`flex flex-col sm:flex-col lg:flex-row ${
+                            index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                        } justify-between items-center w-full gap-4 z-10`}
+                        >
+                        <SpotlightCard
+                            className="custom-spotlight-card flex flex-col m-4 z-10"
+                            spotlightColor="rgba(0, 229, 255, 0.2)"
+                        >
+                            <p className="text-amber-100 z-10">
+                                {calc.about}
+                            </p>
+                        </SpotlightCard>
+                        {calc.component}
+                        </div>
+                    ))}
+                </div>
+            </div>           
+            
 
 
         </div>

@@ -21,7 +21,7 @@ export default function BMIconverter() {
     };
 
     return (
-        <div className="w-1/2 min-h-auto flex items-center justify-center flex-col gap-4 p-6 text-white/20 stroke-amber-700 bg-amber-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 ">
+        <div className="w-1/2 min-h-auto flex items-center justify-center flex-col gap-4 p-6 text-white/20 stroke-amber-700 bg-amber-900/80 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 ">
             <BlurText
                 text="BMI Converter"
                 delay={150}

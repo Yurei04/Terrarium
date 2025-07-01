@@ -1,7 +1,6 @@
 "use client"
 
 import AnimatedContent from "@/components/effects/animatedContent";
-import Aurora from "@/components/effects/aurora";
 import BlurText from "@/components/effects/blurText";
 import TextPressure from "@/components/effects/textPressure";
 import Threads from "@/components/effects/threads";
@@ -17,21 +16,30 @@ export default function YourBodyInNumbersHome() {
                         enableMouseInteraction={true}
                     />
                 </div>
-                <div className="mb-10">
-                    <TextPressure
-                        text="Your_Body_In_Numbers"
-                        flex={true}
-                        alpha={false}
-                        stroke={false}
-                        width={true}
-                        weight={true}
-                        italic={true}
-                        textColor="#ffffff"
-                        strokeColor="#ff0000"
-                        minFontSize={100}
+                 <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white text-center px-4">
+                    <div className="mb-10">
+                        <TextPressure
+                            text="Your_Body_In_Numbers"
+                            flex={true}
+                            alpha={false}
+                            stroke={false}
+                            width={true}
+                            weight={true}
+                            italic={true}
+                            textColor="#ffffff"
+                            strokeColor="#ff0000"
+                            minFontSize={100}
+                        />
+                    </div>
+                    <BlurText
+                        text="What Happens to you body after some time?"
+                        delay={150}
+                        animateBy="words"
+                        direction="top"
+                        className="text-2xl mb-8 text-white z-10"
                     />
-                </div>
-
+                 </div>
+                
             </div>           
             <div className="flex lg:flex-row sm:flex-col text-white items-center justify-center w-full h-screen p-12 mt-6 z-10">
                 <AnimatedContent
