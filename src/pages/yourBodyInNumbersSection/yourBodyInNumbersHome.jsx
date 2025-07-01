@@ -4,17 +4,17 @@ import AnimatedContent from "@/components/effects/animatedContent";
 import Aurora from "@/components/effects/aurora";
 import BlurText from "@/components/effects/blurText";
 import TextPressure from "@/components/effects/textPressure";
+import Threads from "@/components/effects/threads";
 
 export default function YourBodyInNumbersHome() {
     return (
         <div className="relative w-full min-h-screen overflow-hidden">
             <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white text-center px-4">
                 <div className="pointer-events-none fixed inset-0 z-0">
-                    <Aurora
-                        colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
-                        blend={0.5}
-                        amplitude={1.0}
-                        speed={0.5}
+                    <Threads
+                        amplitude={3}
+                        distance={1}
+                        enableMouseInteraction={true}
                     />
                 </div>
                 <div className="mb-10">
@@ -31,13 +31,7 @@ export default function YourBodyInNumbersHome() {
                         minFontSize={100}
                     />
                 </div>
-                <BlurText
-                    text="Welcome To The Wellness Map"
-                    delay={150}
-                    animateBy="words"
-                    direction="top"
-                    className="text-2xl mb-8 text-white z-10"
-                /> 
+
             </div>           
             <div className="flex lg:flex-row sm:flex-col text-white items-center justify-center w-full h-screen p-12 mt-6 z-10">
                 <AnimatedContent
