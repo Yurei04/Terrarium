@@ -7,11 +7,10 @@ import { Menu, X } from "lucide-react"
 
 const navLinks = [
   { title: "Home", href: "/" },
-  { title: "Wellness Map", href: "/theWellnessMap" },
-  { title: "Build Your Balance", href: "/buildYourBalance" },
-  { title: "Germ World", href: "/germWorld" },
-  { title: "Life Line", href: "/lifeLines" },
-  { title: "Chat Care", href: "/buildYourBalance" } 
+  { title: "About", href: "/" },
+  { title: "Option", href: "/" },
+  { title: "Contact Us", href: "/" },
+  { title: "Chat Care", href: "/chatCare" } 
 ]
 
 export default function NavBar() {
